@@ -1,6 +1,6 @@
 package com.tameofthrones.model;
 
-import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.Set;
 
 public class Ruler {
@@ -10,7 +10,11 @@ public class Ruler {
 
     public Ruler(final String name) {
         this.name = name;
-        this.allies = new HashSet<>();
+        this.allies = new LinkedHashSet<>();
+    }
+
+    public String getName() {
+        return this.name;
     }
 
     public Set<String> getAllies() {
