@@ -33,7 +33,6 @@ public class InputReader {
             }
             String[] separatedInputs = input.split(INPUT_SEPERATOR);
             kingdomsWithMessages.put(separatedInputs[0], separatedInputs[1]);
-            System.out.println(kingdomsWithMessages);
         } while (!input.isEmpty());
     }
 }
