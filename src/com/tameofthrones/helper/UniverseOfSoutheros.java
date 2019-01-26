@@ -4,6 +4,7 @@ import com.tameofthrones.model.Kingdom;
 import com.tameofthrones.model.Kingdoms;
 import com.tameofthrones.model.Ruler;
 
+import java.util.Map;
 import java.util.Optional;
 
 public class UniverseOfSoutheros {
@@ -20,5 +21,9 @@ public class UniverseOfSoutheros {
         if(emblemFinder.find(emblem, message)){
             ruler.addAlly(kingdomName);
         }
+    }
+
+    public void updateRulerWithAllies(Ruler ruler, Map<String, String> kingdomNamesWithMessages) {
+        kingdomNamesWithMessages.forEach((kingdomName, message) -> updateRulerWithAlly(ruler, kingdomName, message));
     }
 }
