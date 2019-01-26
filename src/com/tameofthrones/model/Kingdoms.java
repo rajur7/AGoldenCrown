@@ -11,9 +11,7 @@ public class Kingdoms {
             new Kingdom("water", "octopus"),
             new Kingdom("ice", "mammoth"),
             new Kingdom("air", "owl"),
-            new Kingdom("fire", "dragon"),
-            new Kingdom("space", "gorilla")
-    );
+            new Kingdom("fire", "dragon"));
 
     public Optional<Kingdom> getKingdomEmblem(final String kingdomName) {
         return kingdoms.stream().filter(kingdom -> kingdomName.equalsIgnoreCase(kingdom.getName())).findFirst();
